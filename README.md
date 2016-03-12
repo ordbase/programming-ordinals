@@ -15,6 +15,6 @@ What's Franklin?
 
 See the Epsilon theme in the Franklin repo @ [`/franklin/themes/epsilon` »](https://github.com/bryanbraun/franklin/tree/master/source/themes/epsilon)
 
-See the Epsilon sample live book in the bitbooks archive @ [`bitbooks.github.io/example-book-epsilon` »](http://bitbooks.github.io/example-book-epsilon).
+See the Epsilon sample book in the bitbooks archive @ [`bitbooks.github.io/example-book-epsilon` »](http://bitbooks.github.io/example-book-epsilon).
 
 
