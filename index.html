@@ -6,14 +6,20 @@ layout: default
 
           <section class="main-content" role="main">
             <div class="main-content-source">
-              [[ content ]]
+             {% for chapter in site.chapters %}
+                <a name="{{ forloop.index }}"></a>
+                <h1>{{ chapter.title }}</h1><!-- use h2 - why? why not? -->
+                {{ chapter.content }}
+             {% endfor %}         
             </div>
+            <!-- 
             <nav class="main-content-nav clearfix" role="navigation">
               <ul>
                 <li>[[ previous_link(data.tree) ]]</li>
                 <li>[[ next_link(data.tree) ]]</li>
               </ul>
             </nav>
+            -->
           </section>
 
           <aside id="sidr" class="aside-content" role="complementary">
@@ -23,7 +29,14 @@ layout: default
                 <h3>Table of Contents</h3>
                 <nav role="navigation">
                   <ul>
-                    [[ tree_to_html(data.tree) ]]
+                    
+                    <!-- was: [[ tree_to_html(data.tree) ]] -->
+                    {% for chapter in site.chapters %}
+                      <li class="child">
+                        <a href="#{{ forloop.index }}">{{ chapter.title }}</a>
+                      </li>
+                    {% endfor %}
+                    
                   </ul>
                 </nav>
               </div>
@@ -61,7 +74,4 @@ layout: default
           </aside>
 
         </div><!-- end content-wrapper -->
-
-
-
 
